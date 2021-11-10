@@ -1,43 +1,51 @@
-/* body{
-    /* background: radial-gradient(circle at 12.5% 12.5%, #8760ec 0, #4d42d4 50%, #0028bd 100%);  */
 
+/* d-flex justify-content-center align-items-center  */
+html{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background-image: url(./images/fondo2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+
+    height: 100%;
+    margin: 0;
+}
+/* html{
+    font-family: 'Mochiy Pop P One', sans-serif;
+} */
 .container{
-    height: 100vh;
+    height: 100%;
     
     
 }
 
 .col{
-    height: 70vh;
-}
-.row{
-    width: 50vw;
-}
-.lado1{
-    border-bottom-left-radius: 2%;
-    border-top-left-radius: 2%;
-    background: #62d5c3;
-}
-
-.lado1 img{
-    width: 100%;
     height: 100%;
-    object-fit: cover;
-    
+}
+.relleno{
+    width: 100%;
+    height: 15%;
+}
+.contenido{
+    width: 100%;
+    height: 50%;
 }
 
-.lado2{
-    border-bottom-right-radius: 2%;
-    border-top-right-radius: 2%;
-    background: #62d5c3;
-    color: white;
-}
-.lado2 img{
-    height: 12%;
-    width: 50%;
-}
-.cont-form{
+/* .cont-form{
     height: 40%;
+} */
+.card{
+    
+    box-shadow: 2px 2px 2px 2px black;
+}
+.card img{
+    height: 50%;
+    width: 80%;
 }
 .input-group-text{
     height: 52px;
@@ -53,3 +61,84 @@
 input.form-control{
     height: 52px;
 }
+
+
+form a{
+    text-decoration: none;
+}
+/*** ESTILOS BOTÓN GROW ELLIPSE ***/
+.ov-btn-grow-ellipse {
+    background: #28a745; /* color de fondo */
+    color: #fff; /* color de fuente */
+    border: 2px solid #28a745; /* tamaño y color de borde */
+    /* padding: 16px 20px; */
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    height: 40px;
+    width: 80px;
+    }
+.ov-btn-grow-ellipse:hover {
+    color: #28a745;/* color de fuente hover */
+    }
+.ov-btn-grow-ellipse::after {
+    content: "";
+    background: #fff; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    transform: scale(0, 0);
+    transition: all 0.4s ease;
+    }
+.ov-btn-grow-ellipse:hover::after {
+    transition: all 0.6s ease-out;
+    transform: scale(1, 1);
+    }
+
+/*** ESTILOS BOTÓN SLIDE LEFT ***/
+.ov-btn-slide-left {
+    background: #007bff; /* color de fondo */
+    color: #fff; /* color de fuente */
+    border: 2px solid #007bff; /* tamaño y color de borde */
+    /* padding: 16px 20px; */
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    height: 40px;
+    width: 95px;
+    }
+    .ov-btn-slide-left:hover {
+    color: #007bff; /* color de fuente hover */
+    }
+    .ov-btn-slide-left::after {
+    content: "";
+    background: #fff; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    }
+    .ov-btn-slide-left:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    }
