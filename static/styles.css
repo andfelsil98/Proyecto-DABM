@@ -1,5 +1,4 @@
 
-/* d-flex justify-content-center align-items-center  */
 html{
     height: 100%;
     margin: 0;
@@ -10,39 +9,23 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
-    background-attachment: fixed;
-
     height: 100%;
     margin: 0;
 }
-/* html{
-    font-family: 'Mochiy Pop P One', sans-serif;
-} */
-.container{
-    height: 100%;
-    
-    
-}
 
-.col{
-    height: 100%;
-}
 .relleno{
     width: 100%;
-    height: 15%;
+    height: 4vh;
+}
+.relleno2{
+    width: 100%;
+    height: 35%;
 }
 .contenido{
     width: 100%;
     height: 50%;
 }
 
-/* .cont-form{
-    height: 40%;
-} */
-.card{
-    
-    box-shadow: 2px 2px 2px 2px black;
-}
 .card img{
     height: 50%;
     width: 80%;
@@ -61,13 +44,12 @@ body{
 input.form-control{
     height: 52px;
 }
-
-
-form a{
-    text-decoration: none;
+button{
+    cursor: pointer;
 }
-/*** ESTILOS BOTÓN GROW ELLIPSE ***/
-.ov-btn-grow-ellipse {
+
+/*** ESTILOS BOTÓN SLIDE TOP ***/
+.ov-btn-slide-top {
     background: #28a745; /* color de fondo */
     color: #fff; /* color de fuente */
     border: 2px solid #28a745; /* tamaño y color de borde */
@@ -78,29 +60,31 @@ form a{
     overflow: hidden;
     display: inline-block;
     height: 40px;
-    width: 80px;
     }
-.ov-btn-grow-ellipse:hover {
-    color: #28a745;/* color de fuente hover */
+    .ov-btn-slide-top:hover {
+    color: #28a745; /* color de fuente hover */
     }
-.ov-btn-grow-ellipse::after {
+    .ov-btn-slide-top::after {
     content: "";
     background: #fff; /* color de fondo hover */
     position: absolute;
     z-index: -1;
     padding: 16px 20px;
     display: block;
-    border-radius: 50%;
-    left: -50%;
-    right: -50%;
-    top: -150%;
-    bottom: -150%;
-    transform: scale(0, 0);
-    transition: all 0.4s ease;
+    left: 0;
+    right: 0;
+    top: -100%;
+    bottom: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
     }
-.ov-btn-grow-ellipse:hover::after {
-    transition: all 0.6s ease-out;
-    transform: scale(1, 1);
+    .ov-btn-slide-top:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
     }
 
 /*** ESTILOS BOTÓN SLIDE LEFT ***/
@@ -115,7 +99,6 @@ form a{
     overflow: hidden;
     display: inline-block;
     height: 40px;
-    width: 95px;
     }
     .ov-btn-slide-left:hover {
     color: #007bff; /* color de fuente hover */
@@ -142,3 +125,15 @@ form a{
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
     }
+
+/*-----------------------------media queries------------------------------------------------------*/
+
+@media(max-width: 992px){
+    body{
+    
+        /* background-attachment: fixed; */
+        background-image: url(./images/fondopeq.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;}
+}
