@@ -1,0 +1,40 @@
+.col-6{
+    background: red;
+}
+body{
+    height: 100vh;
+    
+    margin: 0;
+    
+}
+
+.container-fluid{
+    height: 100%;
+    background-image: url(./images/fondo2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    
+}
+
+.relleno{
+    height: 15vh;
+}
+
+.relleno img{
+    height: auto;
+    width: auto;
+}
+.card{
+    background-color: rgba(255,255,255, 0.2) !important;
+}
+
+@media(max-width: 992px){
+    .container-fluid{
+    
+        height: 100%;
+        background-image: url(./images/fondopeq.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;}
+}

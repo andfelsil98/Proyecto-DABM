@@ -5,28 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="../static/login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 
 </head>
 <body>
     <div class="container">
-
+<!-- 
         <div class="row relleno ">
           <div class="col"></div>
-        </div>
+        </div> -->
 
         <div class="row contenido ml-0">
             <!-- <div class="col lado1 pl-0 pr-0">
                 <img src="../static/images/casa.jpg" alt="Imagen medica">
             </div> -->
-            <div class="col-12 col-md-8 offset-md-2 text-center" >
+            <div class="columnas col-12 col-md-8 offset-md-2 text-center" >
               <div class="card-transparent pt-3" >
                 <img src="../static/images/logo escuela.png" class="card-img-top dblock mx-auto" alt="Logo">
-                <div class="card-body">
+                <div class="card-body pb-0">
                   <h3 class="card-title">Bienvenido</h3>
                   <h5>Por favor ingrese su usuario y Contraseña</h5>
+                  <div class="alert alert-warning" role="alert">
+                    El ingreso por voz se encuentra activo
+                  </div>
                   <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                   <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                   
@@ -35,8 +38,8 @@
                       <label for="exampleInputEmail1">Usuario</label> 
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                          <span class="input-group-text ">
-                              <img src="../static/images/icono usuario.png" alt="Logo user">
+                          <span class="input-group-text text-center">
+                              <img class="ml-1" src="../static/images/icono usuario.png" alt="Logo user">
                           </span>
                         </div>
                         <input type="text" class="form-control" placeholder="Ingrese usuario">
@@ -49,7 +52,7 @@
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                         <span class="input-group-text ">
-                            <img src="../static/images/passwordd.png" alt="Logo user">
+                            <img class="ml-1" src="../static/images/passwordd.png" alt="Logo user">
                         </span>
                         </div>
                       <input type="password" class="form-control mb-3" id="exampleInputPassword1" placeholder="Ingrese Contraseña">
@@ -62,20 +65,14 @@
                     
                     <button type="button" class="ov-btn-slide-left btn-block" data-toggle="modal" data-target="#modalRegistro">Registrarse</button>
                   </form>
-
-
-
-
                 </div>
               </div>
-
             </div>
             </div>
-            <div class="row relleno2 ">
+            <!-- <div class="row relleno2 ">
               <div class="col">
-    
               </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!--todos los modals recomendablemente van fuera de cualquier seccion es decir al nivel del body-->
@@ -102,7 +99,7 @@
               </div>
         
             </form>
-            <div class="alert alert-warning" role="alert">
+            <div class="alert alert-success" role="alert">
               Por favor ingrese el usuario y la Contraseña del admin para registrarse
             </div>
           </div>
