@@ -1,6 +1,6 @@
-.col-6{
+/* .col-6{
     background: red;
-}
+} */
 body{
     height: 100vh;
     
@@ -17,16 +17,20 @@ body{
     
 }
 
+/* .logo{
+    height: 20vh;
+} */
 .relleno{
-    height: 15vh;
+    height: 10vh;
 }
 
 .relleno img{
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
 }
 .card{
     background-color: rgba(255,255,255, 0.2) !important;
+    box-shadow: 1px 1px 1px 1px black;
 }
 
 @media(max-width: 992px){
@@ -37,4 +41,11 @@ body{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;}
+}
+
+@media(max-width: 1051px){
+    .relleno img{
+        height: 30%;
+        width: 30%;
+    }
 }
