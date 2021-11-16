@@ -3,6 +3,13 @@ body{
   height: 100vh;
 }
 
+
+
+h4{
+  width: 90%;
+  margin: 0 auto
+  
+}
 .botones{
     height: 35vh;
 }
