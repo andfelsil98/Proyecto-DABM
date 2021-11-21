@@ -119,10 +119,13 @@
               Por favor ingrese el usuario y la contraseña del admin para registrarse
             </div>
             <p>{% if verificacion == False %}
-              <div class="alert alert-danger" role="alert">
+              <!-- <div class="alert alert-danger" role="alert">
                 Usuario o contraseña incorrectos, por favor ingrese los datos nuevamente.
                 
-              </div>
+              </div> -->
+              <script>
+                alert('Usuario o contrasena incorrectos')
+              </script>
               {% endif %}
             </p>
           </div>

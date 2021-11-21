@@ -31,12 +31,14 @@ def registro():
             return render_template("registro.html", title = "Registro")     
         else:
             return render_template("login.html", title = "Login", verificacion = verificacion)
+            # return 'falso'
 
 @app.route('/menu', methods = ['POST'] )
 def menu():
     return render_template('main.html', title = 'Menu principal')
 
 def verificar(usuario, password, nombreArchivo):
+    
     directorio = os.path.dirname(__file__)
     archivo = nombreArchivo 
     ruta = os.path.join(directorio, archivo)
@@ -51,6 +53,8 @@ def verificar(usuario, password, nombreArchivo):
         datos.append(l)  
         if (usuario in l) and (password in l):
             return True
+    if len(usuario) == 0 or len(password) == 0:
+        return 'vacio'
     return False                  
 
 if __name__ == "__main__":
