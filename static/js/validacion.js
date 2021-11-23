@@ -19,3 +19,4 @@ function registro(){
     document.getElementById("formRegistro").submit();
   }
 }
+

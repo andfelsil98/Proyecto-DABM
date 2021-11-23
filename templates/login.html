@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
     <script src="{{ url_for('static', filename='js/validacion.js') }}"></script>
+    <!-- <script>
+      $(window).on('load',function(){
+          $('#modalRegistro').modal('show');
+      });
+  </script> -->
     
 
 </head>
@@ -34,7 +39,7 @@
                     El ingreso por voz se encuentra activo.
                   </div>
 
-                  <p>{% if resultado == False %}
+                  <p>{% if resultado == "no existe" %}
                     <div class="alert alert-danger" role="alert">
                       Usuario o contraseña incorrectos, por favor ingrese los datos nuevamente.
                     </div>
@@ -118,22 +123,21 @@
             <div class="alert alert-success" role="alert">
               Por favor ingrese el usuario y la contraseña del admin para registrarse
             </div>
-            <p>{% if verificacion == False %}
-              <!-- <div class="alert alert-danger" role="alert">
-                Usuario o contraseña incorrectos, por favor ingrese los datos nuevamente.
-                
-              </div> -->
+
+            <p>{% if verificacion == "no existe" %}
+
               <script>
-                alert('Usuario o contrasena incorrectos')
+                alert('Usuario o contraseña incorrectos, por favor ingrese los datos nuevamente')
+                // $(window).on('load',function(){
+                // $('#modalRegistro').modal('show');
+                // });
+                // $('#modalRegistro').modal('show');
+  
               </script>
               {% endif %}
             </p>
           </div>
-          <!--
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary" onclick="registro()">Continuar</button>
-          </div>-->
+
         </div>
       </div>
   </div>
